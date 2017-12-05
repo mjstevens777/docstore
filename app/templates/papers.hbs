@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-sm-12 col-xs-12 main">
+      {{papers-search editActive=editActive markdownActive=markdownActive pdfActive=pdfActive toggle=(action "toggle")}}
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Contents</div>
+        <ul class="list-group">
+          {{#each model as |paper|}}
+            <li class="list-group-item"><a href="#{{paper.displayId}}">{{paper.title}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+
+      {{#each model as |paper|}}
+        {{paper-listing paper=paper showPdf=(action "showPdf")}}
+      {{/each}}
+    </div>
+
+    <div class="col-md-6 hidden-sm hidden-xs sidebar">
+      <iframe src="{{pdfUrl}}"></iframe>
+    </div>
+  </div>
+</div>
+

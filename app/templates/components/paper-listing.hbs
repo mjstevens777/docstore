@@ -1,0 +1,17 @@
+<div id="{{paper.displayId}}" class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="hidden-sm hidden-xs">{{paper.title}}</h2>
+    <h2 class="hidden-md hidden-lg"><a href="{{paper.pdfUrl}}">{{paper.title}}</a></h2>
+  </div>
+  <div class="panel-body">
+    <div class="col-md-12">{{paper.bibtex}}</div>
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <div class="code"></div>
+      </div>
+      <div class="col-md-6 col-xs-12">
+        <div class="markdown">{{{paper.notesHtml}}}</div>
+      </div>
+    </div>
+  </div>
+</div>

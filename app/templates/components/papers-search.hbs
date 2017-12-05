@@ -1,0 +1,30 @@
+<nav class="navbar navbar-static-top">
+  <form class="navbar-form navbar-left" role="search">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search">
+      <div class="input-group-btn">
+        <label type="button" {{action "search"}} class="btn btn-default">
+          <span class="glyphicon glyphicon-search"></span>
+        </label>
+        <label type="button" {{action "toggleEdit"}} class="btn btn-default {{if editActive "active"}} hidden-md hidden-lg">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </label>
+        <label type="button" {{action "toggleMarkdown"}} class="btn btn-default {{if markdownActive "active"}} hidden-md hidden-lg">
+          <span class="glyphicon glyphicon-eye-open"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="btn-group hidden-sm hidden-xs" role="group" aria-label="...">
+        <label type="button" {{action "toggleEdit"}} class="btn btn-default {{if editActive "active"}}">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </label>
+        <label type="button" {{action "toggleMarkdown"}} class="btn btn-default {{if markdownActive "active"}}">
+          <span class="glyphicon glyphicon-eye-open"></span>
+        </label>
+        <label type="button" {{action "togglePdf"}} class="btn btn-default hidden-sm hidden-xs {{if pdfActive "active"}}">
+          <span class="glyphicon glyphicon-file"></span>
+        </label>
+    </div>
+  </form>
+</nav>
